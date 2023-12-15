@@ -1,10 +1,10 @@
-
+Open AI Code 
 ```
 import os
 from openai import AzureOpenAI
     
 client = AzureOpenAI(
-    api_key="a34a353bd97c49f2917b7eb8d824e7ef",  
+    api_key="7282c43ed0b549118f59d015ccdc467d",  
     api_version="2023-10-01-preview",
     azure_endpoint = "https://openapiazconf.openai.azure.com/"
     )
@@ -17,4 +17,6 @@ start_phrase = 'Write a tagline for an ice cream shop. '
 response = client.completions.create(model=deployment_name, prompt=start_phrase, max_tokens=10)
 print(response.choices[0].text)
 ```
-Run the cell and see the output
+RAG Sample
+
+https://colab.research.google.com/drive/1_k_vdynZOvPO7p7eWe3hpQdgdtgCFa1L#scrollTo=AsI2Y_JnHUKk
