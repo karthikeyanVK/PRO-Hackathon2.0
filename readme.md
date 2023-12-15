@@ -20,3 +20,18 @@ print(response.choices[0].text)
 RAG Sample
 
 https://colab.research.google.com/drive/1_k_vdynZOvPO7p7eWe3hpQdgdtgCFa1L#scrollTo=AsI2Y_JnHUKk
+
+UI Interface:
+
+Packages: Chainlit, Gradio, Any front-end code
+Purpose: Interface for user interaction and input.
+Query Processor:
+
+Package: GPT-4
+Purpose: Descriptive processing, understanding user queries or descriptions.
+Model Creation:
+
+Package: Lazy
+Purpose: Creating predictive models dynamically at runtime based on user input.
+
+
