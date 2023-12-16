@@ -2,20 +2,24 @@ Open AI Code
 ```
 import os
 from openai import AzureOpenAI
-    
+ 
 client = AzureOpenAI(
-    api_key="7282c43ed0b549118f59d015ccdc467d",  
-    api_version="2023-10-01-preview",
-    azure_endpoint = "https://openapiazconf.openai.azure.com/"
-    )
-    
-deployment_name='prohackathon-2' #This will correspond to the custom name you chose for your deployment when you deployed a model. 
-    
-# Send a completion call to generate an answer
-print('Sending a test completion job')
-start_phrase = 'Write a tagline for an ice cream shop. '
-response = client.completions.create(model=deployment_name, prompt=start_phrase, max_tokens=10)
-print(response.choices[0].text)
+  api_key = "7282c43ed0b549118f59d015ccdc467d",  
+  api_version = "2023-05-15",
+  azure_endpoint = "https://openapiazconf.openai.azure.com/"
+)
+ 
+response = client.chat.completions.create(
+    model="prohackathon-2", # model = "deployment_name".
+    messages=[
+        {"role": "system", "content": "Assistant is a large language model trained by OpenAI."},
+        {"role": "user", "content": "suggest me a icecream shop name"}
+    ]
+)
+ 
+#print(response)
+print(response.model_dump_json(indent=2))
+print(response.choices[0].message.content)
 ```
 RAG Sample
 
