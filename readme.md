@@ -9,7 +9,7 @@ client = AzureOpenAI(
     azure_endpoint = "https://openapiazconf.openai.azure.com/"
     )
     
-deployment_name='azconfmodel' #This will correspond to the custom name you chose for your deployment when you deployed a model. 
+deployment_name='prohackathon-2' #This will correspond to the custom name you chose for your deployment when you deployed a model. 
     
 # Send a completion call to generate an answer
 print('Sending a test completion job')
